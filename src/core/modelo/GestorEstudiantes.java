@@ -4,6 +4,8 @@ import core.entrada.GestorEntrada;
 import core.salida.GestorSalida;
 import altas.Altas;
 import bajas.Bajas;
+import lista.Listado;
+
 import java.util.ArrayList;
 
 public class GestorEstudiantes {
@@ -27,5 +29,9 @@ public class GestorEstudiantes {
 
     public void eliminarEstudiante() {
         bajas.eliminarEstudiante();
+    }
+    public void listarEstudiantes() {
+        Listado listado = new Listado(salida, estudiantes);
+        listado.listarEstudiantes();
     }
 }

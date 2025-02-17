@@ -22,6 +22,8 @@ public class Principal {
                 case 2:
                     gestor.eliminarEstudiante();
                     break;
+                case 3:
+                    gestor.listarEstudiantes();
                 case 5:
                     ejecutando = false;
                     System.out.println("¡Gracias por usar el sistema!");
