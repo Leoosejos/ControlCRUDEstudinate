@@ -49,7 +49,7 @@ public class Altas {
 
         Estudiante estudiante = new Estudiante(id, nombreCompleto, edad, fechaNacimiento);
 
-        System.out.println(" Primera Asignatura:");
+        salida.mostrarMensajePrimeraAsignatura();
         String nombreAsignatura1 = entrada.leerTexto("Nombre de la asignatura: ");
         double notaAsignatura1;
         do {
@@ -61,7 +61,7 @@ public class Altas {
 
         Asignatura asignatura1 = new Asignatura(nombreAsignatura1, notaAsignatura1);
 
-        System.out.println(" Segunda Asignatura:");
+        salida.mostrarMnesajeSegundaAsignatura();
         String nombreAsignatura2 = entrada.leerTexto("Nombre de la asignatura: ");
         double notaAsignatura2;
         do {

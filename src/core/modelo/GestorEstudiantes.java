@@ -5,6 +5,7 @@ import core.salida.GestorSalida;
 import altas.Altas;
 import bajas.Bajas;
 import lista.Listado;
+import modificacion.Modificacion;
 
 import java.util.ArrayList;
 
@@ -33,5 +34,10 @@ public class GestorEstudiantes {
     public void listarEstudiantes() {
         Listado listado = new Listado(salida, estudiantes);
         listado.listarEstudiantes();
+    }
+
+    public void modificarNota() {
+        Modificacion modificacion = new Modificacion(entrada, salida, estudiantes);
+        modificacion.modificarNota();
     }
 }

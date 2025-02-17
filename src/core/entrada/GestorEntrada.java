@@ -4,14 +4,14 @@ import java.util.Scanner;
 
 public class GestorEntrada {
     Scanner scanner = new Scanner(System.in);
-    GestorSalida salida = new GestorSalida();
+    private GestorSalida salida;
     public GestorEntrada() {
     }
 
     public int leerEntero(String mensaje) {
         System.out.print(mensaje);
         while (!scanner.hasNextInt()) {
-            salida.mostrarMensajeIntroduceNumeroValido();
+            salida.mostrarMensajeNoValido();
             System.out.print(mensaje);
             scanner.next();
         }
@@ -27,7 +27,7 @@ public class GestorEntrada {
     public double leerDecimal(String mensaje) {
         System.out.print(mensaje);
         while (!scanner.hasNextDouble()) {
-            salida.mostrarMensajeIntroduceNumeroValido();
+            salida.mostrarMensajeNoValido();
             System.out.print(mensaje);
             scanner.next();
         }
