@@ -1,5 +1,7 @@
 package core.salida;
 
+import core.modelo.Estudiante;
+
 public class GestorSalida {
 
     public GestorSalida() {
@@ -10,6 +12,7 @@ public class GestorSalida {
     public void mostrarMenu() {
         System.out.println("1. Agregar estudiante");
         System.out.println("2. Eliminar estudiante");
+        System.out.println("3. Listar estudiantes");
         System.out.println("5. Salir");
     }
 
@@ -55,5 +58,15 @@ public class GestorSalida {
 
     public void mostrarEstudiante(String estudianteInfo) {
         System.out.println(estudianteInfo);
+    }
+    public void mostrarEstudianteDetalles(Estudiante estudiante) {
+        System.out.println("ID: " + estudiante.getId());
+        System.out.println("Nombre: " + estudiante.getNombreCompleto());
+        System.out.println("Edad: " + estudiante.getEdad());
+        System.out.println("Fecha de Nacimiento: " + estudiante.getFechaNacimiento());
+        for (int i = 0; i < estudiante.getAsignaturas().length; i++) {
+            System.out.println("Asignatura " + (i + 1) + ": " + estudiante.getAsignaturas()[i].getNombre() +
+                    " - Nota: " + estudiante.getAsignaturas()[i].getNota());
+        }
     }
 }
