@@ -1,5 +1,6 @@
 package core.modelo;
 
+import altas.Altas;
 import core.entrada.GestorEntrada;
 import core.salida.GestorSalida;
 
@@ -15,5 +16,9 @@ public class GestorEstudiantes {
         estudiantes = new ArrayList<>();
         entrada = new GestorEntrada();
         salida = new GestorSalida();
+    }
+    public void agregarEstudiante() {
+        Altas altas = new Altas(entrada, salida, estudiantes);
+        altas.agregarEstudiante();
     }
 }
